@@ -29,6 +29,7 @@
 		5E90F1062C61FDB4007141C7 /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90F1052C61FDB4007141C7 /* TransitionView.swift */; };
 		5E90F1082C63ACF5007141C7 /* ListForEachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90F1072C63ACF5007141C7 /* ListForEachView.swift */; };
 		5E94C0AE2C58CF8C00BD301D /* StateBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E94C0AD2C58CF8C00BD301D /* StateBinding.swift */; };
+		5E9CB8F42C695EAF006CBF0C /* RockParalax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9CB8F32C695EAF006CBF0C /* RockParalax.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		5E90F1052C61FDB4007141C7 /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
 		5E90F1072C63ACF5007141C7 /* ListForEachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListForEachView.swift; sourceTree = "<group>"; };
 		5E94C0AD2C58CF8C00BD301D /* StateBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBinding.swift; sourceTree = "<group>"; };
+		5E9CB8F32C695EAF006CBF0C /* RockParalax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockParalax.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				5E7EB7262C6791BF009CBFD9 /* RockGroupView.swift */,
+				5E9CB8F32C695EAF006CBF0C /* RockParalax.swift */,
 			);
 			path = ExampleAppMastering;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				5E8A570B2C4EF06C00F2CAF5 /* SharedModel.swift in Sources */,
 				5E7EB7272C6791BF009CBFD9 /* RockGroupView.swift in Sources */,
 				5E88DF9D2C5A5A6E0043F1FC /* PathView.swift in Sources */,
+				5E9CB8F42C695EAF006CBF0C /* RockParalax.swift in Sources */,
 				5E8A57132C4EF5FC00F2CAF5 /* HomeView.swift in Sources */,
 				5E8A57172C4EFF2700F2CAF5 /* AnyHome.swift in Sources */,
 				5E3E69552C4D9FEC00E0363D /* ContentView.swift in Sources */,

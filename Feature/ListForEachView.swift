@@ -15,7 +15,8 @@ struct ListForEachView: View {
         
         NavigationView {
             List(rockGroups) { group in
-                NavigationLink(destination: RockGroupView(rockGroup: group)) {
+//                RockGroupView(rockGroup: group)
+                NavigationLink(destination: RockParalax(imageName: group.groupImageName)) {
                     RockCell(group: group)
                 }
                 .listRowSeparatorTint(.black)
@@ -26,6 +27,8 @@ struct ListForEachView: View {
             .navigationBarTitleDisplayMode(.automatic)
             .navigationTitle("Rock groups")
         }
+        /// Изменим цвет кнопки в NavigationStack на зеленый.
+        .accentColor(.green)
     }
     
     // custom navigationBar
@@ -33,6 +36,8 @@ struct ListForEachView: View {
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.red, .font: UIFont(name: "AmericanTypewriter-CondensedBold", size: 35) ?? UIFont()]
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.red, .font: UIFont(name: "AmericanTypewriter-CondensedBold", size: 20) ?? UIFont()]
+        /// Заменим иконку кнопки назад в NavigationStack.
+        navBarAppearance.setBackIndicatorImage(UIImage(systemName: "arrow.uturn.left"), transitionMaskImage: UIImage(systemName: "arrow.uturn.left"))
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         UINavigationBar.appearance().compactAppearance = navBarAppearance

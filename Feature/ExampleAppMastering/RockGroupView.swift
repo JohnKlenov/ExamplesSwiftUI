@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RockGroupView: View {
     
+    @Environment(\.dismiss) var dismiss
     var rockGroup: RockGroup
     
     var body: some View {
@@ -21,6 +22,21 @@ struct RockGroupView: View {
                 .font(.system(.title, design: .rounded))
                 .fontWeight(.black)
             Spacer()
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    HStack {
+                        Image(systemName: "swift")
+                        Text("BackButton")
+                    }
+                    
+                }
+
+            }
         }
     }
 }
