@@ -22,10 +22,12 @@ struct ListForEachView: View {
                 .listRowSeparatorTint(.black)
                 .listRowBackground(Color.red)
                 .listRowInsets(EdgeInsets(top: 20, leading: 50, bottom: 20, trailing: 50))
+                
             }
             .listStyle(.plain)
             .navigationBarTitleDisplayMode(.automatic)
             .navigationTitle("Rock groups")
+            
         }
         /// Изменим цвет кнопки в NavigationStack на зеленый.
         .accentColor(.green)
