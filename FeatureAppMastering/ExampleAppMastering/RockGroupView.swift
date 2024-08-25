@@ -25,7 +25,7 @@ struct RockGroupView: View {
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
+            ToolbarItem(placement: .topBarLeading ) {
                 Button {
                     dismiss()
                 } label: {

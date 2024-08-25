@@ -23,6 +23,9 @@ struct BaseView: View {
             }
             .listStyle(.plain)
             .navigationTitle("Статьи")
+//            .sheet(item: $selectedArticle) { article in
+//                ArticleDetailView(article: article)
+//            }
             .sheet(isPresented: $showDetailView) {
                 print("onDismiss")
             } content: {
