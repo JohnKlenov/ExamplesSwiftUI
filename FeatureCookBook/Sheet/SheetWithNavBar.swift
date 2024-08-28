@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct SheetWithNavBar: View {
+    
+    @Environment(\.dismiss) private var dismiss
+    var text = "Sheet with navigation bar"
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ZStack{
+                Color(uiColor: UIColor(white: 0.9, alpha: 1))
+                    .ignoresSafeArea()
+                Text(text)
+            }
+            .navigationTitle("Sheet title")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(content: {
+                Button("Dismiss") {
+                    dismiss()
+                }
+                .buttonStyle(.bordered)
+//                .tint(.black)
+            })
+            .toolbarBackground(.gray, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+        }
+        .tint(.white)
     }
 }
 
