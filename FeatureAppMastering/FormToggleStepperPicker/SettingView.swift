@@ -59,7 +59,7 @@ struct SettingView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Сохранить") {
-                        print("did tap Save")
+                        print("did tap SaveBtn")
                     }
                     .foregroundStyle(Color(uiColor: .label))
                 }
