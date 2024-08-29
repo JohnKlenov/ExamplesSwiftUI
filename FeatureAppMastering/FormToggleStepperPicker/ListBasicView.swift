@@ -12,11 +12,14 @@ struct ListBasicView: View {
     @State var cars = FakeData.cars
     @State private var selectedCar: Car?
     
+    @State private var showSettings: Bool = false
+    
     var body: some View {
         NavigationStack {
             List {
                 ForEach(cars) { car in
                     BasicImageRow(car: car)
+                    ///модификатор, который отображает контекстное меню при долгом нажатии на элемент списка.
                         .contextMenu(ContextMenu(menuItems: {
                             
                             Button {
@@ -53,13 +56,29 @@ struct ListBasicView: View {
                 })
             }
             .navigationTitle("Аренда Авто")
+            ///Модификатор toolbar позволяет добавить кнопку на панель навигации.
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action:  {
+                        showSettings = true
+                    }, label: {
+                        Image(systemName: "gear")
+                            .font(.title2)
+                        /// system color
+                            .foregroundStyle(Color(uiColor: .label))
+                    })
+                }
+            }
+            .sheet(isPresented: $showSettings, content: {
+                SettingView()
+                    .presentationDragIndicator(.visible)
+            })
         }
     }
     
     private func delete(item car:Car) {
         if let index = self.cars.firstIndex(where: { $0.id == car.id}) {
             self.cars.remove(at: index)
-            print("fff")
         }
     }
     

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-///тест
 struct BasicImageRow: View {
     
     var car:Car
@@ -17,7 +16,9 @@ struct BasicImageRow: View {
             Image(car.image)
                 .resizable()
                 .frame(width: 60, height: 60)
+            ///модификатор, который обрезает изображение в форме круга.
                 .clipShape(Circle())
+            ///модификатор, который добавляет отступ справа от изображения.
                 .padding(.trailing, 10)
             VStack(alignment: .leading, content: {
                 HStack {
@@ -39,6 +40,7 @@ struct BasicImageRow: View {
             })
             
             Spacer()
+            /// приоритет для layout view
                 .layoutPriority(-100)
             
             if car.isBooked {
