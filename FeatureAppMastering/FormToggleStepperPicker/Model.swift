@@ -45,3 +45,27 @@ struct FakeData {
     ]
 
 }
+
+
+enum DisplayOrderType: Int, CaseIterable {
+    case alphabetical = 0
+    case favoriteFirst = 1
+    case bookedFirst = 2
+    
+    init(type:Int) {
+        switch type {
+        case 0: self = .alphabetical
+        case 1: self = .favoriteFirst
+        case 2: self = .bookedFirst
+        default: self = .alphabetical
+        }
+    }
+    
+    var text: String {
+        switch self {
+        case .alphabetical: return "Алфавитный порядок"
+        case .favoriteFirst: return "Показывать сначала избранные"
+        case .bookedFirst: return "Показывать сначала забронированные"
+        }
+    }
+}

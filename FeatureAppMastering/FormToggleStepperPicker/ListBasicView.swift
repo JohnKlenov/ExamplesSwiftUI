@@ -14,6 +14,8 @@ struct ListBasicView: View {
     
     @State private var showSettings: Bool = false
     
+    var settingStore: SettingStore
+    
     var body: some View {
         NavigationStack {
             List {
@@ -70,7 +72,7 @@ struct ListBasicView: View {
                 }
             }
             .sheet(isPresented: $showSettings, content: {
-                SettingView()
+                SettingView(settingStore: SettingStore())
                     .presentationDragIndicator(.visible)
             })
         }
@@ -98,5 +100,5 @@ struct ListBasicView: View {
 
 
 #Preview {
-    ListBasicView()
+    ListBasicView(settingStore: SettingStore())
 }

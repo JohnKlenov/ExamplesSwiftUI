@@ -10,23 +10,22 @@ import SwiftUI
 struct SettingView: View {
     
     @Environment(\.dismiss) var dismiss
-    private var displayOrders = [ "Алфитный порядок",
-                                  "Показывать сначала избранные",
-                                  "Показывать сначала забронированные"]
     
-    @State private var selectedOrder = 0
+    @State private var selectedOrder = DisplayOrderType.alphabetical
     @State private var showBookedOnly = false
     @State private var maxPriceLevel = 5
     
+    var settingStore: SettingStore
+    
     var body: some View {
-
+        
         NavigationStack {
             Form {
                 
                 Picker(selection: $selectedOrder) {
-                    /// если displayOrders.count равно 5, то диапазон будет включать числа 0, 1, 2, 3 и 4.
-                    ForEach(0..<displayOrders.count, id: \.self) {
-                        Text(displayOrders[$0])
+                    
+                    ForEach(DisplayOrderType.allCases, id: \.self) {
+                        Text($0.text)
                     }
                 } label: {
                     Text("Формат отображения")
@@ -59,7 +58,9 @@ struct SettingView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Сохранить") {
-                        print("did tap SaveBtn")
+                        settingStore.displayOrder = selectedOrder
+                        settingStore.maxPriceLevel = maxPriceLevel
+                        settingStore.showBookedOnly = showBookedOnly
                     }
                     .foregroundStyle(Color(uiColor: .label))
                 }
@@ -72,10 +73,36 @@ struct SettingView: View {
                 }
             })
         }
+        ///чтобы при загрузке этого экрана мы получали уже установленные настройки
+        .onAppear(perform: {
+            selectedOrder = settingStore.displayOrder
+            showBookedOnly = settingStore.showBookedOnly
+            maxPriceLevel = settingStore.maxPriceLevel
+        })
         
     }
 }
 
 #Preview {
-    SettingView()
+    SettingView(settingStore: SettingStore())
 }
+
+
+
+
+
+// MARK: - Trash
+
+/// заменили на enum
+
+//    private var displayOrders = [ "Алфитный порядок",
+//                                  "Показывать сначала избранные",
+//                                  "Показывать сначала забронированные"]
+
+/// если displayOrders.count равно 5, то диапазон будет включать числа 0, 1, 2, 3 и 4.
+//                    ForEach(0..<displayOrders.count, id: \.self) {
+//                        Text(displayOrders[$0])
+//                    }
+
+
+
