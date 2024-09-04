@@ -15,7 +15,7 @@ struct SettingView: View {
     @State private var showBookedOnly = false
     @State private var maxPriceLevel = 5
     
-    var settingStore: SettingStore
+    @EnvironmentObject var settingStore: SettingStore
     
     var body: some View {
         
@@ -84,7 +84,7 @@ struct SettingView: View {
 }
 
 #Preview {
-    SettingView(settingStore: SettingStore())
+    SettingView().environmentObject(SettingStore())
 }
 
 

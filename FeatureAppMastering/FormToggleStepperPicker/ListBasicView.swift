@@ -14,42 +14,48 @@ struct ListBasicView: View {
     
     @State private var showSettings: Bool = false
     
-    var settingStore: SettingStore
+    /// что бы в симуляторе жэто работало мы должны передать сюда данные и rootView
+    @EnvironmentObject var settingStore: SettingStore
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(cars) { car in
-                    BasicImageRow(car: car)
-                    ///модификатор, который отображает контекстное меню при долгом нажатии на элемент списка.
-                        .contextMenu(ContextMenu(menuItems: {
-                            
-                            Button {
-                                self.book(item: car)
-                            } label: {
-                                Label("Забронировать", systemImage: "checkmark.seal.fill")
-                            }
-                            
-                            Button {
-                                self.delete(item: car)
-                            } label: {
-                                HStack{
-                                    Text("Удалить")
-                                    Image(systemName: "trash")
+                ForEach(cars.sorted(by: settingStore.displayOrder.predicate())) { car in
+                    if shouldShowItem(car: car) {
+                        BasicImageRow(car: car)
+                        ///модификатор, который отображает контекстное меню при долгом нажатии на элемент списка.
+                            .contextMenu(ContextMenu(menuItems: {
+                                
+                                Button {
+                                    self.book(item: car)
+                                } label: {
+                                    Label("Забронировать", systemImage: "checkmark.seal.fill")
                                 }
-                            }
-                            
-                            Button(action: {
-                                self.setFavorite(item: car)
-                            }, label: {
-                                HStack{
-                                    Text("Любимый")
-                                    Image(systemName: "star")
+                                
+                                Button {
+                                    self.delete(item: car)
+                                } label: {
+                                    HStack{
+                                        Text("Удалить")
+                                        Image(systemName: "trash")
+                                    }
                                 }
-                            })
-
-
-                        }))
+                                
+                                Button(action: {
+                                    self.setFavorite(item: car)
+                                }, label: {
+                                    HStack{
+                                        Text("Любимый")
+                                        Image(systemName: "star")
+                                    }
+                                })
+                                
+                                
+                            }))
+                            .onTapGesture {
+                                self.selectedCar = car
+                            }
+                    }
                 }
                 ///передает набор индексов(indexSet) в замыкание, которое относится к базовой коллекции данных динамического представления.
                 ///Своего рода indexPath
@@ -72,7 +78,7 @@ struct ListBasicView: View {
                 }
             }
             .sheet(isPresented: $showSettings, content: {
-                SettingView(settingStore: SettingStore())
+                SettingView().environmentObject(self.settingStore)
                     .presentationDragIndicator(.visible)
             })
         }
@@ -95,10 +101,17 @@ struct ListBasicView: View {
             self.cars[index].isBooked.toggle()
         }
     }
+    
+    /// && для true нужно 2 true
+    /// || для true нужно 1 true
+    /// В приведенном выше коде мы проверяем, выбрана ли опция «showBookedOnly», и проверяем уровень цен данной машины.
+    /// если showBookedOnly не выбрана то отобразяться все машину у которых car.priceLevel self.settingStore.maxPriceLevel
+    private func shouldShowItem(car:Car) -> Bool {
+        return (!self.settingStore.showBookedOnly || car.isBooked) && (car.priceLevel <= self.settingStore.maxPriceLevel)
+    }
 }
 
 
-
 #Preview {
-    ListBasicView(settingStore: SettingStore())
+    ListBasicView().environmentObject(SettingStore())
 }

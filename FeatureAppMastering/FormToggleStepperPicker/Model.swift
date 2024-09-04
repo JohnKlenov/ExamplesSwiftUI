@@ -68,4 +68,14 @@ enum DisplayOrderType: Int, CaseIterable {
         case .bookedFirst: return "Показывать сначала забронированные"
         }
     }
+    
+    /// возвращает логическое выражение(предикат), которое возвращает true или false
+    /// для метода sorted(by: )
+    func predicate() -> (Car, Car) -> Bool {
+        switch self {
+        case .alphabetical: return {$0.name < $1.name}
+        case .bookedFirst: return {$0.isBooked && !$1.isBooked}
+        case .favoriteFirst: return {$0.isFavorite && !$1.isFavorite}
+        }
+    }
 }

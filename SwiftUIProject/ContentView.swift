@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selection = 0
+    let settingStore = SettingStore()
     var body: some View {
 
         TabView(selection:$selection) {
@@ -25,9 +26,14 @@ struct ContentView: View {
                           systemImage: "photo.on.rectangle.fill")
                 }.tag(1)
 
-            ProfileView()
+//            ProfileView()
+//                .tabItem {
+//                    Label("Profile",
+//                          systemImage: "person.crop.circle.fill")
+//                }.tag(2)
+            ListBasicView().environmentObject(settingStore)
                 .tabItem {
-                    Label("Profile",
+                    Label("List",
                           systemImage: "person.crop.circle.fill")
                 }.tag(2)
         }
