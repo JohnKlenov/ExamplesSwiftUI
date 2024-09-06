@@ -38,6 +38,9 @@
 		5EC949502C7DF128003736A9 /* ListBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9494F2C7DF128003736A9 /* ListBasicView.swift */; };
 		5EC949522C7F2BF9003736A9 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC949512C7F2BF9003736A9 /* SettingView.swift */; };
 		5EC949562C8472A4003736A9 /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC949552C8472A3003736A9 /* SettingStore.swift */; };
+		5EC949592C8A43C9003736A9 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC949582C8A43C9003736A9 /* FormField.swift */; };
+		5EC9495B2C8A49DC003736A9 /* RequirementText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9495A2C8A49DC003736A9 /* RequirementText.swift */; };
+		5EC9495D2C8A4BBD003736A9 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9495C2C8A4BBD003736A9 /* SignUpView.swift */; };
 		5EDCC9B62C6BF5AC005A0F89 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCC9B52C6BF5AC005A0F89 /* Article.swift */; };
 		5EDCC9B82C6BF5E1005A0F89 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCC9B72C6BF5E1005A0F89 /* BaseView.swift */; };
 		5EDCC9BA2C6BF651005A0F89 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCC9B92C6BF651005A0F89 /* ArticleDetailView.swift */; };
@@ -76,6 +79,9 @@
 		5EC9494F2C7DF128003736A9 /* ListBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBasicView.swift; sourceTree = "<group>"; };
 		5EC949512C7F2BF9003736A9 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		5EC949552C8472A3003736A9 /* SettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
+		5EC949582C8A43C9003736A9 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		5EC9495A2C8A49DC003736A9 /* RequirementText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementText.swift; sourceTree = "<group>"; };
+		5EC9495C2C8A4BBD003736A9 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5EDCC9B52C6BF5AC005A0F89 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		5EDCC9B72C6BF5E1005A0F89 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		5EDCC9B92C6BF651005A0F89 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 		5E8A57062C4EEE2200F2CAF5 /* FeatureAppMastering */ = {
 			isa = PBXGroup;
 			children = (
+				5EC949572C8A4357003736A9 /* SignUpCombine */,
 				5EC9494A2C7DE3D0003736A9 /* FormToggleStepperPicker */,
 				5EDCC9B42C6BF592005A0F89 /* ExampleAM(SheetAlert) */,
 				5E7EB7252C679098009CBFD9 /* ExampleAppMastering */,
@@ -209,6 +216,16 @@
 				5EC949552C8472A3003736A9 /* SettingStore.swift */,
 			);
 			path = FormToggleStepperPicker;
+			sourceTree = "<group>";
+		};
+		5EC949572C8A4357003736A9 /* SignUpCombine */ = {
+			isa = PBXGroup;
+			children = (
+				5EC949582C8A43C9003736A9 /* FormField.swift */,
+				5EC9495A2C8A49DC003736A9 /* RequirementText.swift */,
+				5EC9495C2C8A4BBD003736A9 /* SignUpView.swift */,
+			);
+			path = SignUpCombine;
 			sourceTree = "<group>";
 		};
 		5EDCC9B42C6BF592005A0F89 /* ExampleAM(SheetAlert) */ = {
@@ -291,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC9495B2C8A49DC003736A9 /* RequirementText.swift in Sources */,
 				5EDCC9B62C6BF5AC005A0F89 /* Article.swift in Sources */,
 				5E8A570B2C4EF06C00F2CAF5 /* SharedModel.swift in Sources */,
 				5E7EB7272C6791BF009CBFD9 /* RockGroupView.swift in Sources */,
@@ -315,11 +333,13 @@
 				5E77C28D2C5CF0600064186C /* AnimationView .swift in Sources */,
 				5E3E69532C4D9FEC00E0363D /* SwiftUIProjectApp.swift in Sources */,
 				5EC949472C7B3C7A003736A9 /* SheetView.swift in Sources */,
+				5EC949592C8A43C9003736A9 /* FormField.swift in Sources */,
 				5EC949562C8472A4003736A9 /* SettingStore.swift in Sources */,
 				5E16574D2C527F6200866F89 /* Image.swift in Sources */,
 				5E90F1082C63ACF5007141C7 /* ListForEachView.swift in Sources */,
 				5EDCC9B82C6BF5E1005A0F89 /* BaseView.swift in Sources */,
 				5E94C0AE2C58CF8C00BD301D /* StateBinding.swift in Sources */,
+				5EC9495D2C8A4BBD003736A9 /* SignUpView.swift in Sources */,
 				5EC949452C7B3B65003736A9 /* SheetHome.swift in Sources */,
 				5E8A57152C4EF6CB00F2CAF5 /* GalleryView.swift in Sources */,
 				5E83DEF72C53D1E8003F1819 /* StackView.swift in Sources */,
