@@ -12,6 +12,7 @@ struct FormField: View {
     var fieldName:String = ""
 
     @Binding var fieldValue:String
+    
     var isSecure:Bool = false
     
     var body: some View {

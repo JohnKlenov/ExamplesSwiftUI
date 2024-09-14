@@ -9,10 +9,10 @@ import SwiftUI
 
 struct SignUpView: View {
     
-    @State var username = ""
-    @State var password = ""
-    @State var passwordConfirm = ""
-    
+    /// следим за изменениями не храним
+    /// если хотим следить и храить @StateObject.
+    /// C iOS 17 ObservableObject deprecated  вместо @StateObject - @State,  @ObservedObject больше не нужен
+    @ObservedObject private var userRegistrationViewModel = UserRegistrationViewModel()
     
     var body: some View {
         
@@ -22,19 +22,20 @@ struct SignUpView: View {
                 .bold()
                 .padding(.bottom, 30)
             
-            FormField(fieldName: "login", fieldValue: $username, isSecure: true)
-            RequirementText(text: "минимум 4 символа")
+            FormField(fieldName: "login", fieldValue: $userRegistrationViewModel.userLogin, isSecure: true)
+            RequirementText(iconColor: userRegistrationViewModel.isLoginLengthValid ? Color.secondary : Color(red: 251/255, green: 128/255, blue: 128/255) , text: "Минимум 4 символа", isStrikeThrough: userRegistrationViewModel.isLoginLengthValid)
                 .padding()
             
-            FormField(fieldName: "password", fieldValue: $password)
+            FormField(fieldName: "password", fieldValue: $userRegistrationViewModel.password)
             VStack {
-                RequirementText(iconName: "lock.open", text: "Минимум 8 символов", isStrikeThrough: false)
-                RequirementText(iconName: "lock.open", text: "Один символ с большой буквы", isStrikeThrough: false)
+                RequirementText(iconName: "lock.open",
+                                iconColor: userRegistrationViewModel.isPasswordLengthValid ? Color.secondary : Color(red: 251/255, green: 128/255, blue: 128/255), text: "Минимум 8 символов", isStrikeThrough: userRegistrationViewModel.isPasswordLengthValid)
+                RequirementText(iconName: "lock.open", iconColor: userRegistrationViewModel.isPasswordLengthValid ? Color.secondary : Color(red: 251/255, green: 128/255, blue: 128/255), text: "Один символ с большой буквы", isStrikeThrough: userRegistrationViewModel.isPasswordLengthValid)
             }
             .padding()
             
-            FormField(fieldName: "Подтвердите пароль", fieldValue: $passwordConfirm, isSecure: true)
-            RequirementText(text: "Пароль должен совпадать с введенным ранее", isStrikeThrough: false)
+            FormField(fieldName: "Подтвердите пароль", fieldValue: $userRegistrationViewModel.passwordConfirm, isSecure: true)
+            RequirementText(text: "Пароль должен совпадать с введенным ранее", isStrikeThrough: userRegistrationViewModel.isPasswordConfirmValid)
                 .padding()
                 .padding(.bottom, 50)
             
