@@ -62,6 +62,9 @@
 		5EC949902C99C68A003736A9 /* MapFlatMapFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9498F2C99C68A003736A9 /* MapFlatMapFilter.swift */; };
 		5EC949932C9D6F86003736A9 /* CatchRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC949922C9D6F86003736A9 /* CatchRetry.swift */; };
 		5EC949962C9D7EB3003736A9 /* DebounceThrottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC949952C9D7EB3003736A9 /* DebounceThrottle.swift */; };
+		5EC949992C9EC8D3003736A9 /* NotificationCenterCH№2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC949982C9EC8D3003736A9 /* NotificationCenterCH№2.swift */; };
+		5EC9499B2C9ECCAB003736A9 /* URLSessionCH№2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9499A2C9ECCAA003736A9 /* URLSessionCH№2.swift */; };
+		5EC9499D2CA024F1003736A9 /* TimerCHN№2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9499C2CA024F0003736A9 /* TimerCHN№2.swift */; };
 		5EDCC9B62C6BF5AC005A0F89 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCC9B52C6BF5AC005A0F89 /* Article.swift */; };
 		5EDCC9B82C6BF5E1005A0F89 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCC9B72C6BF5E1005A0F89 /* BaseView.swift */; };
 		5EDCC9BA2C6BF651005A0F89 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCC9B92C6BF651005A0F89 /* ArticleDetailView.swift */; };
@@ -124,6 +127,9 @@
 		5EC9498F2C99C68A003736A9 /* MapFlatMapFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFlatMapFilter.swift; sourceTree = "<group>"; };
 		5EC949922C9D6F86003736A9 /* CatchRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchRetry.swift; sourceTree = "<group>"; };
 		5EC949952C9D7EB3003736A9 /* DebounceThrottle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceThrottle.swift; sourceTree = "<group>"; };
+		5EC949982C9EC8D3003736A9 /* NotificationCenterCH№2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenterCH№2.swift"; sourceTree = "<group>"; };
+		5EC9499A2C9ECCAA003736A9 /* URLSessionCH№2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionCH№2.swift"; sourceTree = "<group>"; };
+		5EC9499C2CA024F0003736A9 /* TimerCHN№2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerCHN№2.swift"; sourceTree = "<group>"; };
 		5EDCC9B52C6BF5AC005A0F89 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		5EDCC9B72C6BF5E1005A0F89 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		5EDCC9B92C6BF651005A0F89 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
@@ -275,6 +281,7 @@
 		5EC949602C959AED003736A9 /* Combine + MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				5EC949972C9D88BE003736A9 /* CombineHabr№2 */,
 				5EC949692C96254A003736A9 /* CombineHabr */,
 				5EC949612C959C37003736A9 /* MVVM */,
 			);
@@ -395,6 +402,16 @@
 			path = DebounceThrottle;
 			sourceTree = "<group>";
 		};
+		5EC949972C9D88BE003736A9 /* CombineHabr№2 */ = {
+			isa = PBXGroup;
+			children = (
+				5EC949982C9EC8D3003736A9 /* NotificationCenterCH№2.swift */,
+				5EC9499A2C9ECCAA003736A9 /* URLSessionCH№2.swift */,
+				5EC9499C2CA024F0003736A9 /* TimerCHN№2.swift */,
+			);
+			path = "CombineHabr№2";
+			sourceTree = "<group>";
+		};
 		5EDCC9B42C6BF592005A0F89 /* ExampleAM(SheetAlert) */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,11 +504,13 @@
 				5EC949492C7B4579003736A9 /* SheetWithNavBar.swift in Sources */,
 				5EC949862C98963A003736A9 /* ModelMerge+ViewModelMerge.swift in Sources */,
 				5E9CB8F42C695EAF006CBF0C /* RockParalax.swift in Sources */,
+				5EC9499D2CA024F1003736A9 /* TimerCHN№2.swift in Sources */,
 				5EC949962C9D7EB3003736A9 /* DebounceThrottle.swift in Sources */,
 				5E8A57132C4EF5FC00F2CAF5 /* HomeView.swift in Sources */,
 				5EC9494C2C7DE44D003736A9 /* Model.swift in Sources */,
 				5EC949902C99C68A003736A9 /* MapFlatMapFilter.swift in Sources */,
 				5E8A57172C4EFF2700F2CAF5 /* AnyHome.swift in Sources */,
+				5EC9499B2C9ECCAB003736A9 /* URLSessionCH№2.swift in Sources */,
 				5EC9496C2C962604003736A9 /* ModelDataTask.swift in Sources */,
 				5EC949792C981A17003736A9 /* ViewPassthrough.swift in Sources */,
 				5EC949642C959C8E003736A9 /* ModelBasic.swift in Sources */,
@@ -512,6 +531,7 @@
 				5EC949732C96F8E5003736A9 /* ModelPassthrough.swift in Sources */,
 				5EC949502C7DF128003736A9 /* ListBasicView.swift in Sources */,
 				5E8886EA2C57714300492FDF /* ScrollView.swift in Sources */,
+				5EC949992C9EC8D3003736A9 /* NotificationCenterCH№2.swift in Sources */,
 				5EC9497C2C982230003736A9 /* ModelCurrentValue.swift in Sources */,
 				5EC949932C9D6F86003736A9 /* CatchRetry.swift in Sources */,
 				5E8A57112C4EF48E00F2CAF5 /* ProfileView.swift in Sources */,
