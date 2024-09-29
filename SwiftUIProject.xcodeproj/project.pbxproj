@@ -65,6 +65,10 @@
 		5EC949992C9EC8D3003736A9 /* NotificationCenterCH№2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC949982C9EC8D3003736A9 /* NotificationCenterCH№2.swift */; };
 		5EC9499B2C9ECCAB003736A9 /* URLSessionCH№2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9499A2C9ECCAA003736A9 /* URLSessionCH№2.swift */; };
 		5EC9499D2CA024F1003736A9 /* TimerCHN№2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9499C2CA024F0003736A9 /* TimerCHN№2.swift */; };
+		5EC9499F2CA58171003736A9 /* ResultCH№2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9499E2CA58171003736A9 /* ResultCH№2.swift */; };
+		5EC949A12CA58394003736A9 /* GetDataCloudFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC949A02CA58394003736A9 /* GetDataCloudFirestore.swift */; };
+		5EC949A32CA58C43003736A9 /* FutureCH№2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC949A22CA58C43003736A9 /* FutureCH№2.swift */; };
+		5EC949A52CA58DD5003736A9 /* JustCH№2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC949A42CA58DD4003736A9 /* JustCH№2.swift */; };
 		5EDCC9B62C6BF5AC005A0F89 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCC9B52C6BF5AC005A0F89 /* Article.swift */; };
 		5EDCC9B82C6BF5E1005A0F89 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCC9B72C6BF5E1005A0F89 /* BaseView.swift */; };
 		5EDCC9BA2C6BF651005A0F89 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCC9B92C6BF651005A0F89 /* ArticleDetailView.swift */; };
@@ -130,6 +134,10 @@
 		5EC949982C9EC8D3003736A9 /* NotificationCenterCH№2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenterCH№2.swift"; sourceTree = "<group>"; };
 		5EC9499A2C9ECCAA003736A9 /* URLSessionCH№2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionCH№2.swift"; sourceTree = "<group>"; };
 		5EC9499C2CA024F0003736A9 /* TimerCHN№2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerCHN№2.swift"; sourceTree = "<group>"; };
+		5EC9499E2CA58171003736A9 /* ResultCH№2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultCH№2.swift"; sourceTree = "<group>"; };
+		5EC949A02CA58394003736A9 /* GetDataCloudFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataCloudFirestore.swift; sourceTree = "<group>"; };
+		5EC949A22CA58C43003736A9 /* FutureCH№2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FutureCH№2.swift"; sourceTree = "<group>"; };
+		5EC949A42CA58DD4003736A9 /* JustCH№2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JustCH№2.swift"; sourceTree = "<group>"; };
 		5EDCC9B52C6BF5AC005A0F89 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		5EDCC9B72C6BF5E1005A0F89 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		5EDCC9B92C6BF651005A0F89 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
@@ -344,6 +352,7 @@
 				5EC9497B2C982230003736A9 /* ModelCurrentValue.swift */,
 				5EC9497D2C982272003736A9 /* ViewModelCurrentValue.swift */,
 				5EC9497F2C9826F7003736A9 /* ViewCurrentValue.swift */,
+				5EC949A02CA58394003736A9 /* GetDataCloudFirestore.swift */,
 			);
 			path = CurrentValueSubject;
 			sourceTree = "<group>";
@@ -408,6 +417,9 @@
 				5EC949982C9EC8D3003736A9 /* NotificationCenterCH№2.swift */,
 				5EC9499A2C9ECCAA003736A9 /* URLSessionCH№2.swift */,
 				5EC9499C2CA024F0003736A9 /* TimerCHN№2.swift */,
+				5EC9499E2CA58171003736A9 /* ResultCH№2.swift */,
+				5EC949A22CA58C43003736A9 /* FutureCH№2.swift */,
+				5EC949A42CA58DD4003736A9 /* JustCH№2.swift */,
 			);
 			path = "CombineHabr№2";
 			sourceTree = "<group>";
@@ -492,15 +504,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC949A12CA58394003736A9 /* GetDataCloudFirestore.swift in Sources */,
 				5EC9495B2C8A49DC003736A9 /* RequirementText.swift in Sources */,
 				5EC9498B2C98A5B3003736A9 /* ViewModelCombineLatest.swift in Sources */,
 				5EDCC9B62C6BF5AC005A0F89 /* Article.swift in Sources */,
 				5E8A570B2C4EF06C00F2CAF5 /* SharedModel.swift in Sources */,
+				5EC949A32CA58C43003736A9 /* FutureCH№2.swift in Sources */,
 				5E7EB7272C6791BF009CBFD9 /* RockGroupView.swift in Sources */,
 				5EC949682C95A00C003736A9 /* ViewBasic.swift in Sources */,
 				5EC949802C9826F7003736A9 /* ViewCurrentValue.swift in Sources */,
 				5E88DF9D2C5A5A6E0043F1FC /* PathView.swift in Sources */,
 				5EC949522C7F2BF9003736A9 /* SettingView.swift in Sources */,
+				5EC9499F2CA58171003736A9 /* ResultCH№2.swift in Sources */,
 				5EC949492C7B4579003736A9 /* SheetWithNavBar.swift in Sources */,
 				5EC949862C98963A003736A9 /* ModelMerge+ViewModelMerge.swift in Sources */,
 				5E9CB8F42C695EAF006CBF0C /* RockParalax.swift in Sources */,
@@ -541,6 +556,7 @@
 				5EC949592C8A43C9003736A9 /* FormField.swift in Sources */,
 				5EC949562C8472A4003736A9 /* SettingStore.swift in Sources */,
 				5E16574D2C527F6200866F89 /* Image.swift in Sources */,
+				5EC949A52CA58DD5003736A9 /* JustCH№2.swift in Sources */,
 				5E90F1082C63ACF5007141C7 /* ListForEachView.swift in Sources */,
 				5EC9498D2C98A83D003736A9 /* ViewCombineLatest.swift in Sources */,
 				5EDCC9B82C6BF5E1005A0F89 /* BaseView.swift in Sources */,
